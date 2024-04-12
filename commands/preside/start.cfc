@@ -46,6 +46,9 @@ component {
 		serverProps.rewritesConfig   = serverProps.rewritesConfig ?: ( serverProps.directory & "/urlrewrite.xml" );
 
 		var serverConfig = _getServerConfig( arguments.directory, arguments.serverConfigFile );
+		if ( Len( serverConfig?.jvm?.heapSize ) ) {
+			serverProps.heapSize = serverConfig.jvm.heapSize;
+		}
 		if ( Len( serverConfig?.trayIcon ) && !StructKeyExists( serverProps, "trayIcon" ) ) {
 			serverProps.trayIcon = serverConfig.trayIcon;
 		}
