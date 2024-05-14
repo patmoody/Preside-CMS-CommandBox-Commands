@@ -69,7 +69,6 @@ component {
 			DirectoryDelete( arguments.directory & "/tests", true );
 			FileDelete( arguments.directory & "/server-tests.json" );
 			FileDelete( arguments.directory & "/box.json" );
-			FileDelete( arguments.directory & "/test.sh" );
 			FileMove( arguments.directory & "/box.json.no.tests", arguments.directory & "/box.json" );
 		} else {
 			FileDelete( arguments.directory & "/box.json.no.tests" );
@@ -114,8 +113,6 @@ component {
 		var source = GetDirectoryFromPath( GetCurrentTemplatePath() ) & "/../../../_resources/extension";
 
 		DirectoryCopy( source, arguments.directory, true );
-
-		FileSetAccessMode( arguments.directory & "/test.sh", "755" );
 	}
 
 	private void function _replacePlaceholdersWithArgs(
