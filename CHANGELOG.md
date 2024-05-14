@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.0.5
+
+* [#22](https://github.com/pixl8/Preside-CMS-CommandBox-Commands/issues/22) Fix issues with new extension scaffold
+
 ## 7.0.3
 
 * Fix issue where server.json would always be overwritten
