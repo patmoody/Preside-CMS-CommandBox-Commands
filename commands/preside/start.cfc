@@ -185,6 +185,11 @@ component {
 		config[ "host"     ] = ask( message="Host: ", defaultResponse="localhost" );
 		config[ "port"     ] = ask( message="Port: ", defaultResponse=_getDefaultPortForDb( config.dbdriver ) );
 
+		// patch until we have an answer from https://ortussolutions.atlassian.net/browse/CFCONFIG-59
+		if ( config.dbdriver == "mysql" ) {
+			config[ "class" ] = "com.mysql.cj.jdbc.Driver";
+		}
+
 		return config;
 	}
 
