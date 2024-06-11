@@ -1,5 +1,10 @@
 # Changelog
 
+## 7.0.6
+
+* [#23](https://github.com/pixl8/Preside-CMS-CommandBox-Commands/issues/23) Temporarily hardcode a better mysql driver that works with more versions of mysql and mariadb out of the box
+
+
 ## 7.0.5
 
 * [#22](https://github.com/pixl8/Preside-CMS-CommandBox-Commands/issues/22) Fix issues with new extension scaffold
